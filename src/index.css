@@ -194,4 +194,136 @@ header {
   word-spacing: 1rem;
 }
 
+.work-container-subdiv {
+  padding: 0 2rem;
+}
+
+.work-container .sub-heading {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.fontaweosome-style {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: var(--bgcolor);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin: 2rem auto;
+}
+
 /*--------------work section ends*/
+/*--------------about section start*/
+.common-section {
+  margin: 5rem 0;
+}
+
+.our-services img {
+  width: 40%;
+  height: 75%;
+  margin-top: 10rem;
+  box-shadow: rgba(0, 0, 0, 0.25)0px 0.8rem 0.8rem;
+  border-radius: 1.5rem;
+}
+
+.our-services .mini-title {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 3rem 0;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.our-services .main-heading {
+  font-weight: bolder;
+}
+
+.our-servies-info {
+  margin-top: 4rem;
+}
+
+.our-services .our-servies-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 0.1rem solid var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+}
+
+.our-servies-data {
+  padding-left: 2rem;
+}
+
+.our-services .our-servies-data p {
+  margin: 1rem 0;
+}
+
+/*--------------about section ends*/
+/*--------------2nd about section start*/
+.our-services-rightside {
+  margin-top: 10rem;
+}
+
+.our-services-rightside-content {
+  padding-left: 8rem;
+}
+
+/*--------------2nd about section ends*/
+
+/*--------------service  section start*/
+.service-main-container {
+  margin-top: 5rem;
+  padding: 5rem 0;
+}
+
+.service-main-container .main-heading {
+  margin: 3rem 0;
+}
+
+.work-container-subdiv {
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.16);
+}
+
+.work-container-subdiv .main-hero-para {
+  width: 100%;
+}
+
+.work-container-subdiv:hover {
+  background-color: var(--bgcolor);
+  cursor: pointer;
+}
+
+.work-container-subdiv:hover > .fontaweosome-style {
+  background-color: #fff;
+}
+
+.service-main-container .fontaweosome-style {
+  text-align: left;
+  margin: 2rem 0;
+}
+
+@media (min-width:1400px) {
+  .service-container .col-xxl-4 {
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: auto;
+  }
+}
+
+@media (min-width:992px) {
+  .service-container .col-lg-4 {
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: 2.5rem auto;
+  }
+}
+
+/*--------------service section ends*/

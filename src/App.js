@@ -1,5 +1,7 @@
 import React from "react";
 import Aboutus from "./Aboutus";
+import Contact from "./Contact";
+import Footer from "./Footer";
 import Header from "./Header";
 import Homeitwork from "./Homeitwork";
 import Navbar from "./Navbar";
@@ -12,6 +14,8 @@ return(
 <Homeitwork/>
 <Aboutus/>
 <Service/>
+<Contact/>
+<Footer/>
 </>
 )
 }

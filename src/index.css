@@ -429,3 +429,241 @@ footer .main-hero-para {
 }
 
 /*--------------Footer section ends*/
+/* --------------------------------- 404 Error Page Section start
+                        -------------------------------------------------------*/
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 920px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.notfound .notfound-404 {
+  position: absolute;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: "Maven Pro", sans-serif;
+  color: #ececec;
+  font-weight: 900;
+  font-size: 276px;
+  margin: 0px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound h2 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 46px;
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.notfound p {
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.notfound a {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #189cf0;
+  display: inline-block;
+  padding: 16px 38px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 400;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound a:hover {
+  background-color: #fff;
+  border-color: #189cf0;
+  color: #189cf0;
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 h1 {
+    font-size: 162px;
+  }
+
+  .notfound h2 {
+    font-size: 26px;
+  }
+}
+
+/* --------------------------------- 404 Error Page Section end
+                        -------------------------------------------------------*/
+/* --------------------------------- responsive media queries -------------------------------------------------------*/
+@media (min-width: 1500px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1500px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width:998px) {
+  .navbar .navbar-collapse {
+    margin-top: 1rem;
+    background-color: #fff;
+    padding: 2rem 1rem;
+  }
+
+  .input-group .btn-style {
+    font-size: 1.2rem;
+  }
+
+  .main-hero-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-hero-para {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+
+  .main-hero-container .header-left-side {
+    padding-left: 4rem;
+    margin-top: 1rem;
+  }
+
+  .main-herosection-images {
+    position: relative;
+    height: 25rem;
+  }
+
+  .header-right-side img {
+    width: 60%;
+    height: 100%;
+    margin-top: 0rem;
+  }
+
+  .header-right-side .main-hero-img2 {
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    left: 50%;
+    top: -2%;
+    box-shadow: 0.8px 0rem 0.8rem rgb(0 0 0 / 25%);
+  }
+
+  .input-group .input-group-button {
+    right: 26%;
+    width: 30%;
+  }
+
+  .work-container {
+    width: 80vw;
+    padding: 5rem 1rem;
+  }
+
+  .work-container .main-heading {
+    font-size: 2.7rem;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+    word-spacing: 0rem;
+  }
+
+  .work-container-subdiv {
+    padding: 0 0rem;
+  }
+
+  .our-servies-list {
+    padding-left: 3rem;
+  }
+
+  .our-services-rightside-img {
+    text-align: center;
+  }
+
+  .our-services img {
+    width: 70%;
+    height: 85%;
+  }
+
+  .our-services .our-service-leftside-img img {
+    margin-top: 0;
+  }
+
+  .service-container .work-container-subdiv {
+    padding: 0 2rem;
+    margin: 2rem auto;
+  }
+
+  .service-container .main-heading {
+    margin: 5rem auto 0 auto;
+    font-weight: bolder;
+  }
+
+  .our-services-rightside-content {
+    padding-left: 3rem;
+  }
+
+  .contactus-section {}
+
+  .conatct-rightside {
+    margin-top: 5rem;
+  }
+
+  .conatct-rightside form .main-hero-para {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin: 0;
+    font-weight: lighter;
+    width: 98%;
+    padding: 0px 1rem;
+  }
+}

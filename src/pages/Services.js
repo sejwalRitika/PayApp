@@ -1,15 +1,14 @@
 import React from "react";
-import Aboutus from '../Aboutus';
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-const About = () =>{
+import Service from '../Service';
+const Services = () =>{
 return(
 <>
 <Navbar/>
-<Aboutus/>
+<Service/>
 <Footer/>
 </>
 )
 }
-
-export default About;
+export default Services;

@@ -5,15 +5,15 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Homeitwork from "./Homeitwork";
 import Navbar from "./Navbar";
-import Service from "./Service";
+import Service from './Service';
 const Home = () =>{
 return(
 <>
 <Navbar/>
 <Header/>
 <Homeitwork/>
-<Aboutus/>
 <Service/>
+<Aboutus/>
 <Contact/>
 <Footer/>
 </>

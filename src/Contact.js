@@ -1,5 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 const Contact = () =>{
+const [userData, setuserData] = useState({
+firstName: "",
+lastName: "",
+Phone:"",
+email:"",
+address:"",
+message:"",
+});
+let name, value;
+const postUserData = (event) =>{
+name = event.target.name;
+value = event.target.value;
+
+setuserData({...userData, [name]:value})
+};
+const submitData = async(event) =>{
+event.preventDefault();
+const {firstName,lastName,Phone,email,address,message} = userData;
+if(firstName && lastName && Phone && email && address && message){
+const res = fetch(
+'https://reactfirebasewebsite-c8d3f-default-rtdb.firebaseio.com/userDataRecords.json',
+{
+method: "POST",
+headers: {
+"Content-Type" :"application/json",
+},
+body: JSON.stringify({
+firstName,
+lastName,
+Phone,
+email,
+address,
+message,
+})
+}
+);
+if(res){
+setuserData({
+firstName: "",
+lastName: "",
+Phone:"",
+email:"",
+address:"",
+message:"",
+});
+alert("Data Stored");
+}else{
+alert("plz fill the data");
+}
+}else{
+ alert("plz fill the data");
+}
+};
 return(
 <>
 <section className="contactus-section">
@@ -22,38 +75,66 @@ Connect With 0ur <br/> Sales Team
 <form method="POST">
 <div className="row">
 <div className="col-12 col-lg-6 contact-input-felid">
-<input type="text" placeholder="Frist Name"
+<input type="text" 
+name="firstName"
+placeholder="Frist Name"
 className="form-control"
+value={userData.firstName}
+onChange={postUserData}
 />
 </div>
 <div className="col-12 col-lg-6 contact-input-felid">
-<input type="text" placeholder="Last Name"
+<input type="text" 
+name="lastName"
+placeholder="Last Name"
 className="form-control"
+value={userData.lastName}
+onChange={postUserData}
 />
 </div>
 </div>
 <div className="row">
 <div className="col-12 col-lg-6 contact-input-felid">
-<input type="text" placeholder="Phone Name"
+<input type="text" 
+name="Phone"
+placeholder="Phone Name"
 className="form-control"
+value={userData.Phone}
+onChange={postUserData}
 />
 </div>
 <div className="col-12 col-lg-6 contact-input-felid">
-<input type="text" placeholder="Email ID"
+<input type="text" 
+name="email"
+placeholder="Email ID"
 className="form-control"
+value={userData.email}
+onChange={postUserData}
 />
 </div>
 </div>
 <div className="row">
 <div className="col-12 contact-input-felid">
-<input type="text"  placeholder="Add Address" className="form-control"/>
+<input type="text"
+name="address"  
+placeholder="Add Address" 
+className="form-control"
+value={userData.address}
+onChange={postUserData}
+/>
 </div>
 <div>
 </div>
 </div>
 <div className="row">
 <div className="col-12">
-<input type="text"  placeholder="Enter Your Message" className="form-control"/>
+<input type="text"  
+name="message"
+placeholder="Enter Your Message" 
+className="form-control"
+value={userData.message}
+onChange={postUserData}
+/>
 </div>
 <div>
 </div>
@@ -67,7 +148,7 @@ className="main-hero-para">
 Lorem ipsum dolor sit amet,Excepturi architecto voluptatibus quas
   </label>
 </div>
-<button type="submit" className="btn btn-style w-100">
+<button type="submit" className="btn btn-style w-100" onClick={submitData}>
 Submit 
 </button>
 </form>
